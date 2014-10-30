@@ -1,0 +1,7 @@
+language: node_js
+node_js:
+  - '0.10'
+before_install:
+  - currentfolder=${PWD##*/}
+  - if [ "$currentfolder" != 'generator-tae-simple' ]; then cd .. && eval "mv $currentfolder generator-tae-simple" && cd generator-tae-simple; fi
+
