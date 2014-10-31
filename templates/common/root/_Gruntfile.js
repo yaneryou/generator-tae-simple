@@ -470,15 +470,15 @@ module.exports = function (grunt) {
           %>',
         singleRun: true
       }
-    }
+    }<% if (templates) { %>,
 
 
-    <% if (templates) { %>
+
     ngtemplates:  {
        app:        {
-           cwd:      '<%= yeoman.app %>',
+           cwd:      '<%%= yeoman.app %>',
            src:      'views/*.html',
-           dest:     '<%= yeoman.app %>/scripts/templates/base.js',
+           dest:     '<%%= yeoman.app %>/scripts/templates/base.js',
            options:    {
                htmlmin:  {
                    collapseWhitespace: true,

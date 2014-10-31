@@ -9,6 +9,7 @@ var wiredep = require('wiredep');
 var chalk = require('chalk');
 
 var Generator = module.exports = function Generator(args, options) {
+
   yeoman.generators.Base.apply(this, arguments);
   this.argument('appname', { type: String, required: false });
   this.appname = this.appname || path.basename(process.cwd());
@@ -57,6 +58,8 @@ var Generator = module.exports = function Generator(args, options) {
     this.env.options.coffee = this.options.coffee;
   }
 
+
+
   this.hookFor('angular:common', {
     args: args
   });
@@ -70,6 +73,7 @@ var Generator = module.exports = function Generator(args, options) {
   });
 
   this.on('end', function () {
+
     var enabledComponents = [];
 
     if (this.animateModule) {
@@ -124,6 +128,7 @@ var Generator = module.exports = function Generator(args, options) {
       skipMessage: this.options['skip-message'],
       callback: this._injectDependencies.bind(this)
     });
+
 
     if (this.env.options.ngRoute) {
       this.invoke('angular:route', {
@@ -199,12 +204,11 @@ Generator.prototype.askForBootstrap = function askForBootstrap() {
 };
 
 Generator.prototype.askForTemplates = function askForTemplates(){
-    var templates = this.templates;
     var cb = this.async();
 
     this.prompt([{
         type: 'confirm',
-        name: 'ngtemplates',
+        name: 'templates',
         message: 'Would you like to make htmls(view/*.html) into one js?',
         default: true
     }], function(props){
@@ -310,8 +314,9 @@ Generator.prototype.bootstrapFiles = function bootstrapFiles() {
 Generator.prototype.appJs = function appJs() {
     var sourceFileList = ['scripts/app.js', 'scripts/controllers/main.js'];
     if(this.templates){
-        sourceFileList.push('scripts/templates/base.js')
+        sourceFileList = ['scripts/app.js', 'scripts/controllers/main.js','scripts/templates/base.js'];
     }
+
   this.indexFile = this.appendFiles({
     html: this.indexFile,
     fileType: 'js',
