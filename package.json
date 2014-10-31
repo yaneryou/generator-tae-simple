@@ -6,32 +6,57 @@
   "main": "app/index.js",
   "repository": "yaneryou/generator-tae-simple",
   "author": {
-    "name": "",
-    "email": "",
+    "name": "yaneryou",
+    "email": "xxdawei@gmail.com",
     "url": "https://github.com/yaneryou"
   },
   "engines": {
-    "node": ">=0.10.0"
+      "node": ">=0.10.0",
+      "npm": ">=1.2.10"
   },
   "scripts": {
     "test": "mocha"
   },
   "files": [
-    "app"
+      "app",
+      "common",
+      "constant",
+      "controller",
+      "decorator",
+      "directive",
+      "factory",
+      "filter",
+      "main",
+      "provider",
+      "route",
+      "service",
+      "templates",
+      "value",
+      "view",
+      "script-base.js",
+      "util.js"
   ],
   "keywords": [
     "yeoman-generator"
   ],
   "dependencies": {
-    "yeoman-generator": "^0.17.0",
-    "chalk": "^0.5.0",
-    "yosay": "^0.3.0",
-    "wiredep": "^1.8.6"
+      "wiredep": "^1.0.0",
+      "yeoman-generator": "^0.16.0",
+      "yosay": "^0.2.0",
+      "chalk": "^0.4.0"
   },
   "devDependencies": {
-    "mocha": "*"
+      "grunt": "~0.4.1",
+      "grunt-contrib-jshint": "~0.8.0",
+      "grunt-conventional-changelog": "~1.1.0",
+      "grunt-release": "~0.6.0",
+      "load-grunt-tasks": "~0.3.0",
+      "mocha": "*",
+      "semver": "~2.3.0",
+      "underscore.string": "~2.3.1"
   },
   "peerDependencies": {
-    "yo": ">=1.0.0"
+      "generator-karma": ">=0.8.2",
+      "yo": ">=1.0.0"
   }
 }

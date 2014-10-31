@@ -1,5 +1,5 @@
 {<% var ngVer = "1.2.0" %>
-  "name": "<%= _.slugify(_.humanize(appname)) %>",
+  "name": "<%= _.camelize(_.humanize(appname)) %>",
   "version": "0.0.0",
   "dependencies": {
     "angular": "~<%= ngVer %>",
@@ -12,8 +12,7 @@
     "angular-sanitize": "~<%= ngVer %>"<% } %><% if (animateModule) { %>,
     "angular-animate": "~<%= ngVer %>"<% } %><% if (touchModule) { %>,
     "angular-touch": "~<%= ngVer %>"<% } %><% if (routeModule) { %>,
-    "angular-route": "~<%= ngVer %>"<% } %><% if(jquery) { %>,
-    "jquery": "~1.9.1"<% } %>
+    "angular-route": "~<%= ngVer %>"<% } %>
   },
   "devDependencies": {
     "angular-mocks": "~<%= ngVer %>",
