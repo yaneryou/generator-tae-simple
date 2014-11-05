@@ -203,15 +203,17 @@ Generator.prototype.askForBootstrap = function askForBootstrap() {
   }.bind(this));
 };
 
-Generator.prototype.askForTemplates = function askForTemplates(){
+Generator.prototype.askForTemplates = function askForTemplates() {
     var cb = this.async();
 
-    this.prompt([{
-        type: 'confirm',
-        name: 'templates',
-        message: 'Would you like to make htmls(view/*.html) into one js?',
-        default: true
-    }], function(props){
+    this.prompt([
+        {
+            type: 'confirm',
+            name: 'templates',
+            message: 'Would you like to make htmls(view/*.html) into one js?',
+            default: true
+        }
+    ], function (props) {
         this.templates = props.templates;
         cb();
     }.bind(this));

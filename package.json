@@ -1,7 +1,7 @@
 {
   "name": "generator-tae-simple",
   "version": "0.0.0",
-  "description": "extend of angular-generator, add grunt-angular-templates whick extract html(view/*)s into a js file, extract all build css and js in the end.",
+  "description": "extend of generator-angular, add grunt-angular-templates whick extract html(view/*)s into a js file, extract all build css and js in the end.",
   "license": "MIT",
   "main": "app/index.js",
   "repository": "yaneryou/generator-tae-simple",
